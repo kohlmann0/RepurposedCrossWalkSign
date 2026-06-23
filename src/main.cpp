@@ -29,17 +29,20 @@ void setup() {
 
 void loop() {
   delay(1000); // Sleep for 1000ms to reduce power consumption, but still allow interrupts to wake the device
-  Serial.println("Current value: " + String(currentValue)); // Debugging statement to check the current value in the serial monitor
+
+// Debugging, just loop through and count up for now.
+  currentValue++;
+
+  Serial.println("Current value: " + String(currentValue)); // Debugging statement to check the current value in the serial monitor  
+  driver::display(currentValue);
 }
 
 void CountUp() {
-  currentValue = clamp(currentValue + 1, 0, 9);
-  driver::display(currentValue);
+  currentValue = clamp(currentValue + 1, 0, 99);
 }
 
 void CountDown() {  
-  currentValue = clamp(currentValue - 1, 0, 9);
-  driver::display(currentValue);
+  currentValue = clamp(currentValue - 1, 0, 99);
 }
 
 int clamp(int d, int min, int max) {

@@ -96,5 +96,5 @@ namespace driver {
     writeSegment(TENS_BOTTOM_LEFT, DIGIT_MAP[digit][4]);
     writeSegment(TENS_TOP_LEFT, DIGIT_MAP[digit][5]);
     writeSegment(TENS_MIDDLE, DIGIT_MAP[digit][6]);
-}
+  }
 }
