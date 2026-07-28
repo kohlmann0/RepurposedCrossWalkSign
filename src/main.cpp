@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include "debugPrint.h"
 #include <avr/sleep.h>
 #include <avr/power.h>
 #include <driver.h>
@@ -13,8 +14,12 @@ void CountUp();
 void CountDown();
 
 void setup() {
+
+  #if !(defined(AttachDebugger) && AttachDebugger == 1)
+  // If we aren't attaching a debugger, initialize the serial port for the regular Serial output.
   Serial.begin(9600);
   Serial.println(F("*** Setting Up MRK ***"));
+  #endif
   
   driver::setup(); // Call the driver setup function to initialize the display and any other necessary components
   
@@ -30,10 +35,10 @@ void setup() {
 void loop() {
   delay(1000); // Sleep for 1000ms to reduce power consumption, but still allow interrupts to wake the device
 
-// Debugging, just loop through and count up for now.
+  // Debugging, just loop through and count up for now.
   currentValue++;
 
-  Serial.println("Current value: " + String(currentValue)); // Debugging statement to check the current value in the serial monitor  
+  DebugPrint("Current value: " + String(currentValue)); // Debugging statement to check the current value in the serial monitor  
   driver::display(currentValue);
 }
 
@@ -49,3 +54,4 @@ int clamp(int d, int min, int max) {
   const int t = d < min ? min : d;
   return t > max ? max : t;
 }
+

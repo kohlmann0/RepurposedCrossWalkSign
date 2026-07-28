@@ -1,6 +1,8 @@
 #include <Arduino.h>
 #include "../driver.h"
 #include "driver_config.h"
+#include "debugPrint.h"
+
 /*
  This driver is for a direct IO power control circuit, which uses two buttons to count up and down a value displayed on a 7-segment display. The buttons are connected to pins 2 and 3, and the segments of the display are connected to pins 4-10 for the ones digit, and 11-17 for the tens digit (currently not used, but set as OUTPUT for future expansion).
  The driver uses interrupts to detect button presses, and updates the display accordingly. The value is clamped between 0 and 9 for the ones digit, and between 0 and 99 for the tens digit (currently not used).

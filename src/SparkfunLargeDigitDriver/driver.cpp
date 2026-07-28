@@ -1,17 +1,19 @@
 #include <Arduino.h>
 #include "../driver.h"
 #include "driver_config.h"
+#include "debugPrint.h"
 
 /*
 https://www.sparkfun.com/sparkfun-large-digit-driver.html
 
- Here's how to hook up the Arduino pins to the Large Digit Driver IN
- Arduino pin 6 -> CLK (Green on the 6-pin cable)
- 5 -> LAT (Blue)
- 7 -> SER on the IN side (Yellow)
- 5V -> 5V (Orange)
+ Here's how to hook up the Arduino pins to the Large Digit Driver !IN! side
+ Arduino pin: 
+ GND -> GND (Single Black)
+ 5 -> LAT (White)
+ 6 -> CLK (Red on the 3-pin cable)
+ 7 -> SER on the IN side (Black)
+ 5V -> 5V (Single Red)
  Power Arduino with 12V and connect to Vin -> 12V (Red)
- GND -> GND (Black)
 
  There are two connectors on the Large Digit Driver. 'IN' is the input side that should be connected to
  your microcontroller (the Arduino). 'OUT' is the output side that should be connected to the 'IN' of addtional
@@ -32,7 +34,6 @@ https://www.sparkfun.com/sparkfun-large-digit-driver.html
 #define e  1<<3
 #define f  1<<1
 #define g  1<<2
-#define dp 1<<7
 
 
 namespace driver {
@@ -49,12 +50,16 @@ namespace driver {
     digitalWrite(segmentClock, LOW);
     digitalWrite(segmentData, LOW);
     digitalWrite(segmentLatch, LOW);
+    
+    DebugPrint(F("*** SetUp Complete for SparkfunLargeDigitDriver / Arduino Uno ***"));
   }
 
   
   //Given a number, or '-', shifts it out to the display
   void postToDisplay(byte number)
   {
+    DebugPrint("postToDisplay: " + String(number));
+
     byte segments;
 
     switch (number)
@@ -75,11 +80,18 @@ namespace driver {
     }
 
     //Clock these bits out to the drivers (bit-bang each bit of "segments")
+    
+    DebugPrint(F("Clocking:"));
     for (byte x = 0 ; x < 8 ; x++)
-    {
+    {      
+      DebugPrint("x: " + String(x) + " -> " + String((segments >> (7 - x)) & 1));
+
       digitalWrite(segmentClock, LOW);
-      digitalWrite(segmentData, segments & 1 << (7 - x));
+      delay(10);
+      digitalWrite(segmentData, (segments >> (7 - x)) & 1);
+      delay(10);
       digitalWrite(segmentClock, HIGH); //Data transfers to the register on the rising edge of SRCK
+      delay(10);
     }
   }
 
@@ -88,8 +100,7 @@ namespace driver {
   {
     int number = abs(value); //Remove negative signs and any decimals
 
-    //Serial.print("number: ");
-    //Serial.println(number);
+    DebugPrint("number: " + String(number));
 
     for (byte x = 0 ; x < 2 ; x++)
     {
@@ -99,8 +110,12 @@ namespace driver {
     }
 
     //Latch the current segment data
+    
+    DebugPrint("segmentLatch");
     digitalWrite(segmentLatch, LOW);
+    delay(10);
     digitalWrite(segmentLatch, HIGH); //Register moves storage register on the rising edge of RCK
+    delay(10);
   }
 
 }
