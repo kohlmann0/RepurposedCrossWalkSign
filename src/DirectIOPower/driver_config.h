@@ -1,8 +1,9 @@
 #pragma once
 
 // Declare the count up and down pin numbers as constants
-#define COUNT_UP 2
-#define COUNT_DOWN 3
+#define GREEN_BUTTON_INPUT 2
+#define RED_BUTTON_INPUT 3
+#define YELLOW_BUTTON_INPUT 1
 
 #define ONES_TOP_CENTER 4
 #define ONES_TOP_RIGHT 5

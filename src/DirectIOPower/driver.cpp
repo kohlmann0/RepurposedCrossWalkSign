@@ -12,8 +12,9 @@
 
 namespace driver {
 
-   byte COUNT_UP_INPUT_PIN = COUNT_UP;
-   byte COUNT_DOWN_INPUT_PIN = COUNT_DOWN;
+  byte GREEN_BUTTON_INPUT_PIN = GREEN_BUTTON_INPUT;
+  byte RED_BUTTON_INPUT_PIN = RED_BUTTON_INPUT;
+  byte YELLOW_BUTTON_INPUT_PIN = YELLOW_BUTTON_INPUT;
 
   // Segment map for digits 0-9 (Common Cathode)
   // Positions flow clockwise starting from the top center segment, with the middle segment last:
