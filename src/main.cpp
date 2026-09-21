@@ -47,15 +47,17 @@ void setup() {
   pinMode(driver::YELLOW_BUTTON_INPUT_PIN, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(driver::GREEN_BUTTON_INPUT_PIN), GreenButtonPressed, FALLING);
   attachInterrupt(digitalPinToInterrupt(driver::RED_BUTTON_INPUT_PIN), RedButtonPressed, FALLING);
-  attachInterrupt(digitalPinToInterrupt(driver::YELLOW_BUTTON_INPUT_PIN), YellowButtonPressed, CHANGE);
 
   displayCurrentValue(); // Initialize display to show 0
 }
 
 void loop() {
+  // Poll the yellow button (no interrupt available on this pin)
+  YellowButtonPressed();
+
   HandlePendingButtonEvents();
   displayCurrentValue();
-  delay(250); // Allow updates to appear smoothly while still conserving power
+  delay(50); // Allow updates to appear smoothly while still conserving power
 }
 
 void ResetToZero() {
