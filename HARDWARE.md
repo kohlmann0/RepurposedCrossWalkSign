@@ -65,82 +65,97 @@ The SparkFun driver boards do not behave like a standard I2C display module. The
 
 The project images below document the build and assembly process.
 
-This first image is going to be our "End Goal". I will walk you through some of the basic steps.
+This first image is our end goal. I will walk you through some of the basic steps.
 
 <figure>
-  <img src="Images/IMG_3786.JPEG" alt="Figure 14: Final Build" />
-  <figcaption>Figure 14: Final build.</figcaption>
+  <img src="Images/IMG_3786.JPEG" alt="Figure 1: Final build." />
+  <figcaption>Figure 1: Final build.</figcaption>
 </figure>
+
 <figure>
-  <img src="Images/IMG_3773.JPEG" alt="Figure 3: I am using multi-wire, Female, Dupont, connectors for all my connections (I used a 3-wire connector in this case because it's what I had on-hand.)" />
-  <figcaption>Figure 3: I am using multi-wire, Female, Dupont, connectors for all my connections (I used a 3-wire connector in this case because it's what I had on-hand.)</figcaption>
+  <img src="Images/IMG_3773.JPEG" alt="Figure 2: I am using multi-wire female Dupont connectors for all my connections. I used a 3-wire connector in this case because it was what I had on hand." />
+  <figcaption>Figure 2: I am using multi-wire female Dupont connectors for all my connections. I used a 3-wire connector in this case because it was what I had on hand.</figcaption>
 </figure>
+
 <figure>
-  <img src="Images/IMG_3776.JPEG" alt="Figure 6: Prep the wire for the connector, pulling apart into three separate wires." />
-  <figcaption>Figure 6: Prep the wire for the connector, pulling apart into three separate wires.</figcaption>
+  <img src="Images/IMG_3776.JPEG" alt="Figure 3: Prep the wire for the connector by pulling it apart into three separate wires." />
+  <figcaption>Figure 3: Prep the wire for the connector by pulling it apart into three separate wires.</figcaption>
 </figure>
+
 <figure>
-  <img src="Images/IMG_3778.JPEG" alt="Figure 7: Strip back about 1/8 inch" />
-  <figcaption>Figure 7: Strip back about 1/8 inch.</figcaption>
+  <img src="Images/IMG_3778.JPEG" alt="Figure 4: Strip back about 1/8 inch." />
+  <figcaption>Figure 4: Strip back about 1/8 inch.</figcaption>
 </figure>
+
 <figure>
-  <img src="Images/IMG_3779.JPEG" alt="Figure 8: WalkSign build photo 8" />
-  <figcaption>Figure 8: Female Dupont Pin.</figcaption>
+  <img src="Images/IMG_3779.JPEG" alt="Figure 5: Female Dupont pin." />
+  <figcaption>Figure 5: Female Dupont pin.</figcaption>
 </figure>
+
 <figure>
-  <img src="Images/IMG_3780.JPEG" alt="Figure 9: Place the crimp pin in the crimper with the tabs in the jaw/anvil, and the female portion sticking out" />
-  <figcaption>Figure 9: Place the crimp pin in the crimper with the tabs in the jaw/anvil, and the female portion sticking out.</figcaption>
+  <img src="Images/IMG_3780.JPEG" alt="Figure 6: Place the crimp pin in the crimper with the tabs in the jaw/anvil, and the female portion sticking out." />
+  <figcaption>Figure 6: Place the crimp pin in the crimper with the tabs in the jaw/anvil, and the female portion sticking out.</figcaption>
 </figure>
+
 <figure>
-  <img src="Images/IMG_3782.JPEG" alt="Figure 10: Place the wire into the jaw/tabs, with the exposed wire just barely touching the back of the female portion, so that when you crimp, the first tabs hit the wire insulation, and the second tabs engage the wire itself." />
-  <figcaption>Figure 10: Place the wire into the jaw/tabs, with the exposed wire just barely touching the back of the female portion, so that when you crimp, the first tabs hit the wire insulation, and the second tabs engage the wire itself.</figcaption>
+  <img src="Images/IMG_3782.JPEG" alt="Figure 7: Place the wire into the jaw/tabs, with the exposed wire just barely touching the back of the female portion so that, when you crimp, the first tabs hit the wire insulation and the second tabs engage the wire itself." />
+  <figcaption>Figure 7: Place the wire into the jaw/tabs, with the exposed wire just barely touching the back of the female portion so that, when you crimp, the first tabs hit the wire insulation and the second tabs engage the wire itself.</figcaption>
 </figure>
+
 <figure>
-  <img src="Images/IMG_3772.JPEG" alt="Figure 2: Finished Crimp." />
-  <figcaption>Figure 2: Finished Crimp.</figcaption>
+  <img src="Images/IMG_3772.JPEG" alt="Figure 8: Finished crimp." />
+  <figcaption>Figure 8: Finished crimp.</figcaption>
 </figure>
+
 <figure>
-  <img src="Images/IMG_3774.JPEG" alt="Figure 4: Insert the female pins into the housing." />
-  <figcaption>Figure 4: Insert the female pins into the housing.</figcaption>
+  <img src="Images/IMG_3774.JPEG" alt="Figure 9: Insert the female pins into the housing." />
+  <figcaption>Figure 9: Insert the female pins into the housing.</figcaption>
 </figure>
+
 <figure>
-  <img src="Images/IMG_3775.JPEG" alt="Figure 5: Assemble connector" />
-  <figcaption>Figure 5: Assemble connector.</figcaption>
+  <img src="Images/IMG_3775.JPEG" alt="Figure 10: Assemble connector." />
+  <figcaption>Figure 10: Assemble connector.</figcaption>
 </figure>
+
 <figure>
-  <img src="Images/IMG_3783.JPEG" alt="Figure 11: Do both ends. Choose a length to match your physical installation" />
+  <img src="Images/IMG_3783.JPEG" alt="Figure 11: Do both ends. Choose a length to match your physical installation." />
   <figcaption>Figure 11: Do both ends. Choose a length to match your physical installation.</figcaption>
 </figure>
+
 <figure>
-  <img src="Images/IMG_3771.JPEG" alt="Figure 1: Connect the Output from the first Sparkfun Driver to the Input of the second Driver." />
-  <figcaption>Figure 1: Connect the Output from the first Sparkfun Driver to the Input of the second Driver.</figcaption>
+  <img src="Images/IMG_3771.JPEG" alt="Figure 12: Connect the output from the first SparkFun driver to the input of the second driver." />
+  <figcaption>Figure 12: Connect the output from the first SparkFun driver to the input of the second driver.</figcaption>
 </figure>
+
 <figure>
-  <img src="Images/IMG_3785.JPEG" alt="Figure 13: Make similar cables for the connection to the Walksign itself. Use your best judgement on length, and wiring path, and cut to roughly the correct length." />
-  <figcaption>Figure 13: Make similar cables for the connection to the Walksign itself. Use your best judgement on length, and wiring path, and cut to roughly the correct length.</figcaption>
+  <img src="Images/IMG_3785.JPEG" alt="Figure 13: Make similar cables for the connection to the WalkSign itself. Use your best judgment on length and wiring path, and cut to roughly the correct length." />
+  <figcaption>Figure 13: Make similar cables for the connection to the WalkSign itself. Use your best judgment on length and wiring path, and cut to roughly the correct length.</figcaption>
 </figure>
+
 <figure>
-  <img src="Images/IMG_3784.JPEG" alt="Figure 12: Group your wires together to keep them organized." />
-  <figcaption>Figure 12: Group your wires together to keep them organized.</figcaption>
+  <img src="Images/IMG_3784.JPEG" alt="Figure 14: Group your wires together to keep them organized." />
+  <figcaption>Figure 14: Group your wires together to keep them organized.</figcaption>
 </figure>
+
 <figure>
   <img src="Images/IMG_3787.JPEG" alt="Figure 15: Terrible picture, but solder your wires to the correct pad on the display driver." />
   <figcaption>Figure 15: Terrible picture, but solder your wires to the correct pad on the display driver.</figcaption>
 </figure>
+
 <figure>
-  <img src="Images/IMG_3801.JPEG" alt="Figure 19: With my salvaged walk-sign, I used hot-glue to secure the components to the back of the sign. Note, the green circuit board had a hard time making a mechanical bond. When in doubt, use more glue." />
-  <figcaption>Figure 19: With my salvaged walk-sign, I used hot-glue to secure the components to the back of the sign. Note, the green circuit board had a hard time making a mechanical bond. When in doubt, use more glue.</figcaption>
+  <img src="Images/IMG_3801.JPEG" alt="Figure 16: With my salvaged WalkSign, I used hot glue to secure the components to the back of the sign. Note: the green circuit board had a hard time making a mechanical bond. When in doubt, use more glue." />
+  <figcaption>Figure 16: With my salvaged WalkSign, I used hot glue to secure the components to the back of the sign. Note: the green circuit board had a hard time making a mechanical bond. When in doubt, use more glue.</figcaption>
 </figure>
+  
+These are the basic electrical connections you will use on the controller side.
 
-\
-These are the basic electrical connections you will use on the Controller side. 
-* With my code, 5,6,7 are the data signals going to the display driver, along with 5v supply, and ground (GND). 
-* 2,3, and 4 (missing in this image), are the Green, Red, and Yellow button inputs respectively.
-* Shown here is my Arduino Uno test-bed, but this could also be the Arduino pro, or an ESP32, or something else.
+- With my code, 5, 6, and 7 are the data signals going to the display driver, along with 5V supply and ground (GND).
+- 2, 3, and 4 (missing in this image) are the Green, Red, and Yellow button inputs, respectively.
+- Shown here is my Arduino Uno test bed, but this could also be an Arduino Pro, an ESP32, or something else.
 
 <figure>
-  <img src="Images/IMG_3802.JPEG" alt="Figure 20: Controller connections." />
-  <figcaption>Figure 20: Controller.</figcaption>
+  <img src="Images/IMG_3802.JPEG" alt="Figure 17: Controller connections." />
+  <figcaption>Figure 17: Controller connections.</figcaption>
 </figure>
 
 ## References
